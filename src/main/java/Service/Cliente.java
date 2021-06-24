@@ -1,20 +1,24 @@
 package Service;
 
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 
-@NoArgsConstructor
 @Data
 public class Cliente {
 
     private String nome;
     private String cpf;
+    private LocalDate dataNascimeto;
+    private Integer numeroDeFamiliar;
 
-    public Cliente(String nome, String cpf) {
+    public Cliente(String nome, String cpf, LocalDate dataNascimeto, Integer numeroDeFamiliar) {
         this.nome = nome;
         this.cpf = cpf;
+        this.dataNascimeto = dataNascimeto;
+        this.numeroDeFamiliar =numeroDeFamiliar;
     }
 }
